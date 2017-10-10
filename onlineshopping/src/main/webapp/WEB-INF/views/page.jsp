@@ -26,7 +26,8 @@
 
     <!-- Custom CSS -->
     <link href="${css}/shop-homepage.css" rel="stylesheet">
-
+    <link href="${css}/full-width-pics.css" rel="stylesheet">
+	<link href="${css}/logo-nav.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,9 +40,13 @@
 <body>
 
     <!-- Navigation -->
-	<%@include file="./shared/navbar.jsp" %>
+	<!-- %@include file="./shared/navbar.jsp" %> -->
 
     <!-- Page Content -->
+    <c:if test="${userClickLogin == true}">
+		<%@include file="login.jsp" %>
+	</c:if>
+    
     <c:if test="${userClickHome == true}">
 		<%@include file="home.jsp" %>
 	</c:if>
